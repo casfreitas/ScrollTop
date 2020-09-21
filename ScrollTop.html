@@ -1,0 +1,58 @@
+<style type="text/css">
+
+    /*SCROLL TOP*/
+    a[href="#top"]{
+        padding:10px;
+        position:fixed;
+        top: 90%;
+        right:40px;
+        display:none;
+        font-size: 30px;
+    }
+    
+    a[href="#top"]:hover{
+        text-decoration:none;
+    }
+
+    /*****************************SCROLL TOP*/
+
+</style>
+
+
+<script type="text/javascript">
+  //var sc = jQuery.noConflict();
+  $(document).ready(function(){
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 100) {
+            $('a[href="#top"]').fadeIn();
+        } else {
+            $('a[href="#top"]').fadeOut();
+        }
+    });
+
+    $('a[href="#top"]').click(function(){
+        $('html, body').animate({scrollTop : 0},800);
+        return false;
+    });
+});
+</script>
+
+
+<a href="#top" class="glyphicon glyphicon-chevron-up"></a>   
+
+
+
+<!--
+Como usar:
+
+1 - Insira o bloco de código HTML no arquivo layouts/default.html antes do fechamento da tag <body>
+
+2 - Insira o bloco de código CSS em sua folha de estilo
+
+3 - Insira o bloco de código Javascript em seu arquivo JS
+
+ -->
+
+
+
+
